@@ -21,9 +21,8 @@ public class Chapter10 {
 		long i = tasks.stream().filter(t -> t.isDone() == false).count();
 		System.out.println("未完了タスク: " + i + "件");
 
-		// 未完了タスクを表示
+		// タスクを表示
 		tasks.stream()
-			.filter(t -> t.isDone() == false)
 			.sorted((t1, t2) -> t1.getDate().compareTo(t2.getDate()))
 			.forEach(System.out::println);
 	}
